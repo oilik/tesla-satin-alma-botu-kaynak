@@ -35,6 +35,15 @@ Bu bot, **Tesla'nın 16 Temmuz 2025 "Login" güncellemesi** sonrası artık **ç
   Tesla envanterini sürekli takip eder ve kriterlere uyan araç bulunduğunda otomatik olarak rezervasyon yapar.  
   WebSocket, RxJS, Lodash, hCaptcha gibi modern teknolojiler kullanılmıştır.
 
+- `satinal-fixed.js`:  
+  Orijinal `satinal.js` dosyasındaki mantık hatalarının düzeltilmiş versiyonu. Kod daha temiz ve anlaşılır hale getirilmiştir.  
+  **Düzeltilen hatalar:**
+  - hCaptcha referans hataları (`window.hcaptcha` olarak düzeltildi)
+  - Mantık operatörlerindeki hatalar (örn: `[null] == ""` → `true`)
+  - Karmaşık switch-case yapıları basitleştirildi
+  - Erişilemeyen kod blokları temizlendi
+  - Typo düzeltmeleri (örn: "LrediKartiSoyisim" → "KrediKartiSoyisim")
+
 - `odeme.js`:  
   Gerçek rezervasyon sonrasında ödeme adımı için hazırlanmıştır. Adyen ödeme sistemine gerekli kart bilgileri ile POST isteği gönderir.
 
